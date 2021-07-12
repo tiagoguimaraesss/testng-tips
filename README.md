@@ -14,8 +14,11 @@ Explorar na prática as funcionalidades que o _framework_ de teste **TestNG** en
 
 ## Sistema Alvo de Testes
 Para realizar as experimentações com o **TestNG**, foi escolhido um _webservice_ para ser testado. Neste contexto,
-o sistema seleciona foi o [**ViaCEP**](https://viacep.com.br/). O **ViaCEP**, é um _webservice_ que dispõe de basicamente
+o sistema selecionado foi o [**ViaCEP**](https://viacep.com.br/). O **ViaCEP** é um _webservice_ que dispõe de basicamente
 duas funcionalidades:
 
 - Consulta de endereço postal por CEP
 - Consulta de CEP por logradouro + estado
+
+## Dúvidas, Sugestões, Criticas ou Contribuições
+A vontade para abrir uma _issue_ neste mesmo repositório ou para enviar o seu _PR_.
