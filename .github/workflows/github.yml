@@ -36,5 +36,5 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: Run functional test
-      run: mvn clean test -Dtest=BuscaEnderecoPorCEPTest
+      run: mvn clean test
     
