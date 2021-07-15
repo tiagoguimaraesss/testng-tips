@@ -1,3 +1,5 @@
+![](https://badgen.net/github/commits/tiagoguimaraesss/testng-tips/main) ![](https://badgen.net/github/watchers/tiagoguimaraesss/testng-tips)
+
 # TestNG Tips
 Projeto com intuito de mostrar na prática algumas dicas e práticas relacionadas ao _framework_ de teste **TestNG**.
 
