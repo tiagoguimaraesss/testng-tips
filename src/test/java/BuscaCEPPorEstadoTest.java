@@ -1,10 +1,10 @@
-import especificacao.ViaCEPSpec;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import static especificacao.ViaCEPSpec.getSpec;
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_BAD_REQUEST;
 import static org.apache.http.HttpStatus.SC_OK;
@@ -25,7 +25,7 @@ public class BuscaCEPPorEstadoTest {
     @Test(description = "Busca número de CEP por estado, cidade e logradouro", groups = "valido")
     public void deveriaBuscarCEPPorEstadoCidadeELogradouroValidoTest() {
         given().
-             spec(ViaCEPSpec.getSpec()).
+             spec(getSpec()).
              pathParams(parametrosDePesquisa).
         when().
              get("{estado}/{cidade}/{logradouro}/json").
@@ -37,7 +37,7 @@ public class BuscaCEPPorEstadoTest {
     @Test(description = "Busca número de CEP por estado apenas e retorna erro", groups = "invalido")
     public void deveriaRetornarErroAoBuscarCEPPorEstadoTest() {
         given().
-             spec(ViaCEPSpec.getSpec()).
+             spec(getSpec()).
              pathParam("estado", "RS").
         when().
              get("{estado}/json").
