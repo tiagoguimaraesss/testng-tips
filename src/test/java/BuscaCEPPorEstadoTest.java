@@ -1,3 +1,4 @@
+import especificacao.ViaCEPSpec;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -24,8 +25,7 @@ public class BuscaCEPPorEstadoTest {
     @Test(description = "Busca número de CEP por estado, cidade e logradouro", groups = "valido")
     public void deveriaBuscarCEPPorEstadoCidadeELogradouroValidoTest() {
         given().
-             baseUri("https://viacep.com.br").
-             basePath("/ws").
+             spec(ViaCEPSpec.getSpec()).
              pathParams(parametrosDePesquisa).
         when().
              get("{estado}/{cidade}/{logradouro}/json").
@@ -37,8 +37,7 @@ public class BuscaCEPPorEstadoTest {
     @Test(description = "Busca número de CEP por estado apenas e retorna erro", groups = "invalido")
     public void deveriaRetornarErroAoBuscarCEPPorEstadoTest() {
         given().
-             baseUri("https://viacep.com.br").
-             basePath("/ws").
+             spec(ViaCEPSpec.getSpec()).
              pathParam("estado", "RS").
         when().
              get("{estado}/json").
